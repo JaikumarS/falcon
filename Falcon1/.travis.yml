@@ -1,2 +1,13 @@
+sudo: required
 language: csharp
 solution: Falcon1.sln
+script:
+  - xbuild Falcon1.sln
+deploy:   
+   edge: true
+   provider: cloudfoundry
+   username: minakshi.aggarwal@verizon.com
+   password: ironfoundry@123
+   api: api.beta.ironfoundry.me
+   organization: hackersmkv
+   space: development
